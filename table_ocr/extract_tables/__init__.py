@@ -52,7 +52,7 @@ def find_tables(image):
 def main(files):
     results = []
     for f in files:
-        directory, filename = os.path.split(f)
+        directory, filename = os.path.split(f)       
         image = cv2.imread(f, cv2.IMREAD_GRAYSCALE)
         tables = find_tables(image)
         files = []

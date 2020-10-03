@@ -18,8 +18,9 @@ def text_files_to_csv(files):
             txt = of.read()
         row, column = map(int, filename.split(".")[0].split("-"))
         if row == len(rows):
-            rows.append([])
+            rows.append([directory])
         rows[row].append(txt)
+        
 
     csv_file = io.StringIO()
     writer = csv.writer(csv_file)
